@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-kernel:
+    name: Build Kernel
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Build
+        uses: frstprjkt/kernel_build_action@main
+        with:
+          kernel-url: https://github.com/frstprjkt/kernel_xiaomi_sm6115
+          kernel-branch: 13.0-mios
+          config: vendor/bengal-perf_defconfig
+          arch: arm64
+          ksu: true
+          aosp-gcc: true
+          aosp-clang: true
+          aosp-clang-version: r536225
+          anykernel3: true
+          anykernel3-url: https://github.com/frstprjkt/AnyKernel3
