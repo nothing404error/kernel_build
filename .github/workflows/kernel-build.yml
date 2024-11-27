@@ -12,7 +12,7 @@ jobs:
         uses: frstprjkt/kernel_build_action@main
         with:
           kernel-url: https://github.com/frstprjkt/kernel_xiaomi_sm6115
-          kernel-branch: 13.0-mios
+          kernel-branch: main
           config: vendor/bengal-perf_defconfig
           arch: arm64
           ksu: true
