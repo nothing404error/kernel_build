@@ -16,6 +16,9 @@ jobs:
           config: vendor/bengal-perf_defconfig
           arch: arm64
           ksu: true
+          ksu-other: true
+          ksu-url: https://github.com/rsuntk/KernelSU
+          ksu-version: main
           aosp-gcc: true
           aosp-clang: true
           aosp-clang-version: r536225
