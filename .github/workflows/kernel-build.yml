@@ -21,7 +21,7 @@ jobs:
           ksu-version: main
           aosp-gcc: true
           aosp-clang: true
-          aosp-clang-version: r536225
+          aosp-clang-version: r547379
           anykernel3: true
           anykernel3-url: https://github.com/frstprjkt/AnyKernel3
           extra-cmd: LLVM=1 CONFIG_LTO_CLANG=y CONFIG_THINLTO=y
