@@ -17,8 +17,8 @@ jobs:
           arch: arm64
           ksu: true
           ksu-other: true
-          ksu-url: https://github.com/rsuntk/KernelSU
-          ksu-version: main
+          ksu-url: https://github.com/backslashxx/KernelSU
+          ksu-version: magic
           aosp-gcc: true
           aosp-clang: true
           aosp-clang-version: r547379
