@@ -1,11 +1,11 @@
-name: CI
+name: CI (with KernelSU)
 
 on:
   workflow_dispatch:
 
 jobs:
   build-kernel:
-    name: Build Kernel
+    name: Build Kernel with KernelSU
     runs-on: ubuntu-latest
     steps:
       - name: Build
@@ -15,6 +15,10 @@ jobs:
           kernel-branch: main
           config: vendor/bengal-perf_defconfig
           arch: arm64
+          ksu: true
+          ksu-other: true
+          ksu-url: https://github.com/backslashxx/KernelSU
+          ksu-version: magic
           aosp-gcc: true
           aosp-clang: true
           aosp-clang-version: r547379
