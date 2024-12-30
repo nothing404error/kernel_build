@@ -19,3 +19,4 @@ jobs:
           other-gcc32-url: https://github.com/mvaisakh/gcc-build/releases/download/29122024/eva-gcc-arm-29122024.xz
           anykernel3: true
           anykernel3-url: https://github.com/frstprjkt/AnyKernel3
+          extra-cmd: LD=ld.lld CONFIG_LTO_CLANG=y CONFIG_THINLTO=y
