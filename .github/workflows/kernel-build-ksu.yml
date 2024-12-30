@@ -19,9 +19,7 @@ jobs:
           ksu-other: true
           ksu-url: https://github.com/backslashxx/KernelSU
           ksu-version: magic
-          aosp-gcc: true
-          aosp-clang: true
-          aosp-clang-version: r547379
+          other-gcc64-url: https://github.com/mvaisakh/gcc-build/releases/download/29122024/eva-gcc-arm64-29122024.xz
+          other-gcc32-url: https://github.com/mvaisakh/gcc-build/releases/download/29122024/eva-gcc-arm-29122024.xz
           anykernel3: true
           anykernel3-url: https://github.com/frstprjkt/AnyKernel3
-          extra-cmd: LLVM=1 CONFIG_LTO_CLANG=y CONFIG_THINLTO=y
