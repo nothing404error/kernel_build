@@ -21,3 +21,4 @@ jobs:
           anykernel3: true
           anykernel3-url: https://github.com/frstprjkt/AnyKernel3
           extra-cmd: LLVM=1 LLVM_IAS=1 CONFIG_LTO_CLANG=y CONFIG_THINLTO=y
+          custom-package-name: frstprjkt-kernel-chime-$(date +%d%H%M)
