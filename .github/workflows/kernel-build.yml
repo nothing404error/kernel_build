@@ -12,7 +12,7 @@ jobs:
         uses: frstprjkt/kernel_build_action@main
         with:
           kernel-url: https://github.com/frstprjkt/qcom_sm6115
-          kernel-branch: main
+          kernel-branch: android11
           config: vendor/bengal-perf_defconfig
           arch: arm64
           aosp-gcc: true
@@ -20,5 +20,5 @@ jobs:
           aosp-clang-version: r547379
           anykernel3: true
           anykernel3-url: https://github.com/frstprjkt/AnyKernel3
-          extra-cmd: LLVM=1 LLVM_IAS=1 CONFIG_LTO_CLANG=y CONFIG_THINLTO=y BUILD_NUMBER=$(date +%s)
+          extra-cmd: LLVM=1 LLVM_IAS=1 CONFIG_LTO_CLANG=y CONFIG_THINLTO=y BUILD_NUMBER=$(date +%s) BRANCH=android11
           custom-package-name: valeryn-chime-$(date +%d%H%M)
