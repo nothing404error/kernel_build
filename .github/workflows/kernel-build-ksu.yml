@@ -12,13 +12,13 @@ jobs:
         uses: frstprjkt/kernel_build_action@main
         with:
           kernel-url: https://github.com/frstprjkt/qcom_sm6115
-          kernel-branch: android11
+          kernel-branch: susfs
           config: vendor/bengal-perf_defconfig
           arch: arm64
           ksu: true
           ksu-other: true
-          ksu-url: https://github.com/backslashxx/KernelSU
-          ksu-version: magic
+          ksu-url: https://github.com/KernelSU-Next/KernelSU-Next
+          ksu-version: next-susfs
           aosp-gcc: true
           aosp-clang: true
           aosp-clang-version: r547379
