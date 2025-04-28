@@ -17,7 +17,7 @@ jobs:
           arch: arm64
           aosp-gcc: true
           aosp-clang: true
-          aosp-clang-version: r547379
+          aosp-clang-version: r563880
           anykernel3: true
           anykernel3-url: https://github.com/frstprjkt/AnyKernel3
           extra-cmd: LLVM=1 LLVM_IAS=1 KBUILD_BUILD_USER=valeryn
