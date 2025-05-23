@@ -12,7 +12,7 @@ jobs:
         uses: frstprjkt/kernel_build_action@main
         with:
           kernel-url: https://github.com/frstprjkt/qcom_sm6115
-          kernel-branch: susfs
+          kernel-branch: su/android13
           config: vendor/bengal-perf_defconfig
           arch: arm64
           ksu: true
