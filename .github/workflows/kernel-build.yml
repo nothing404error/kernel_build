@@ -19,7 +19,7 @@ jobs:
         uses: frstprjkt/kernel_build_action@main
         with:
           kernel-url: https://github.com/frstprjkt/qcom_sm6115
-          kernel-branch: android13
+          kernel-branch: rice/android13
           config: vendor/bengal-perf_defconfig
           arch: arm64
           aosp-gcc: true
