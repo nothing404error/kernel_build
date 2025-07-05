@@ -25,7 +25,7 @@ jobs:
           ksu: true
           ksu-skip-patch: true
           ksu-other: true
-          ksu-url: https://github.com/KernelSU-Next/KernelSU-Next
+          ksu-url: https://github.com/frstprjkt/KernelSU-Next
           ksu-version: next
           aosp-gcc: true
           aosp-clang: true
