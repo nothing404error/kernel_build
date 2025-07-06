@@ -1,0 +1,28 @@
+name: CI (with KernelSU + SUSFS)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-kernel:
+    name: Build Kernel with KernelSU + SUSFS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        uses: frstprjkt/kernel_build_action@main
+        with:
+          kernel-url: https://github.com/frstprjkt/qcom_sm6115
+          kernel-branch: su/android13
+          config: vendor/bengal-perf_defconfig
+          arch: arm64
+          ksu: true
+          ksu-skip-patch: true
+          ksu-other: true
+          ksu-url: https://github.com/frstprjkt/KernelSU-Next
+          ksu-version: next-susfs
+          aosp-gcc: true
+          aosp-clang: true
+          aosp-clang-version: r563880
+          anykernel3: true
+          anykernel3-url: https://github.com/frstprjkt/AnyKernel3
+          extra-cmd: LLVM=1 LLVM_IAS=1 KBUILD_BUILD_USER=valeryn
