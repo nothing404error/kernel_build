@@ -20,3 +20,4 @@ jobs:
           aosp-clang-version: r563880
           anykernel3: true
           anykernel3-url: https://github.com/frstprjkt/AnyKernel3
+          extra-cmd: LLVM=1 LLVM_IAS=1
