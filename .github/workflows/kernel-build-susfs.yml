@@ -2,6 +2,10 @@ name: CI (with KernelSU + SUSFS)
 
 on:
   workflow_dispatch:
+    inputs:
+      kernel-branch:
+        required: true
+        type: string
 
 jobs:
   build-kernel:
@@ -12,7 +16,7 @@ jobs:
         uses: frstprjkt/kernel_build_action@main
         with:
           kernel-url: https://github.com/frstprjkt/qcom_sm6115
-          kernel-branch: su/android13
+          kernel-branch: ${{ github.event.inputs.kernel-branch }}
           config: vendor/bengal-perf_defconfig
           arch: arm64
           ksu: true
