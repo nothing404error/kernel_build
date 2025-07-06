@@ -6,6 +6,13 @@ on:
       kernel-branch:
         required: true
         type: string
+      release-type:
+        required: true
+        type: choice
+        options:
+        - kaihatsu
+        - seishiki
+        default: 'kaihatsu'
 
 jobs:
   build-kernel:
@@ -30,3 +37,4 @@ jobs:
           anykernel3: true
           anykernel3-url: https://github.com/frstprjkt/AnyKernel3
           extra-cmd: LLVM=1 LLVM_IAS=1 KBUILD_BUILD_USER=valeryn
+          custom-package-name: valeryn-susfs_$(date +%d%H%M)_chime-${{ github.event.inputs.release-type }}
