@@ -24,12 +24,14 @@ jobs:
         with:
           kernel-url: https://github.com/frstprjkt/qcom_sm6115
           kernel-branch: ${{ github.event.inputs.kernel-branch }}
-          config: vendor/bengal-perf_defconfig
+          config: vendor/bengal-perf_defconfig vendor/xiaomi/citrus.config
           arch: arm64
           aosp-gcc: true
           aosp-clang: true
           aosp-clang-version: r563880
           anykernel3: true
           anykernel3-url: https://github.com/frstprjkt/AnyKernel3
+          anykernel3-branch: old
           extra-cmd: LLVM=1 LLVM_IAS=1 KBUILD_BUILD_USER=valeryn
-          custom-package-name: valeryn_$(date +%d%H%M)_chime-${{ github.event.inputs.release-type }}
+          include-dtbo: true
+          custom-package-name: valeryn_$(date +%d%H%M)_citrus-${{ github.event.inputs.release-type }}
