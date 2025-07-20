@@ -19,6 +19,9 @@ jobs:
     name: Build Kernel with KernelSU + SUSFS
     runs-on: ubuntu-latest
     steps:
+      - name: Display parameters
+        uses: m-s-abeer/update-gha-summary-with-workflow-inputs@v1
+
       - name: Build
         uses: frstprjkt/kernel_build_action@main
         with:
