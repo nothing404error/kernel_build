@@ -25,14 +25,14 @@ jobs:
       - name: Build
         uses: frstprjkt/kernel_build_action@main
         with:
-          kernel-url: https://github.com/frstprjkt/valeryn_xiaomi_sm6115
+          kernel-url: https://github.com/nnippon99/kernel_xiaomi_chime.git
           kernel-branch: ${{ github.event.inputs.kernel-branch }}
-          config: vendor/bengal-perf_defconfig
+          config: vendor/xiaomi/bengal_defconfig vendor/xiaomi/chime.config
           arch: arm64
           aosp-gcc: true
           aosp-clang: true
           aosp-clang-version: r563880
           anykernel3: true
           anykernel3-url: https://github.com/frstprjkt/AnyKernel3
-          extra-cmd: LLVM=1 LLVM_IAS=1 KBUILD_BUILD_USER=valeryn
-          custom-package-name: valeryn_$(date +%d%H%M)_chime-${{ github.event.inputs.release-type }}
+          extra-cmd: LLVM=1 LLVM_IAS=1 KBUILD_BUILD_USER=Interstellar
+          custom-package-name: Interstellar_$(date +%d%H%M)_chime-${{ github.event.inputs.release-type }}
