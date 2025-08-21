@@ -25,7 +25,7 @@ jobs:
       - name: Build
         uses: frstprjkt/kernel_build_action@main
         with:
-          kernel-url: https://github.com/nothing404error/kernel_xiaomi_chime.git
+          kernel-url: https://github.com/nothing404error/kernel_xiaomi_chime16.git
           kernel-branch: ${{ github.event.inputs.kernel-branch }}
           config: vendor/xiaomi/bengal_defconfig vendor/xiaomi/chime.config
           arch: arm64
